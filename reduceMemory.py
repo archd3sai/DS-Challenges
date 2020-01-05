@@ -3,8 +3,8 @@ def reduce_memory(df):
     """
     This function reduce the dataframe memory usage by converting it's type for easier handling.
     
-    Parameters: Dataframe whose memory needs to be reduced
-    Return: Dataframe with reduced memory usage
+    Parameters: Dataframe
+    Return: Dataframe
     """
     
     start_mem_usg = df.memory_usage().sum() / 1024**2 

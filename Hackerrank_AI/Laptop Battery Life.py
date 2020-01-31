@@ -13,9 +13,7 @@ data = []
 for line in datafile:
     data.append([float(i) for i in line.strip().split(',')])
 
-df = pd.DataFrame(getData(), columns=['time', 'battery'])
-
-df = pd.read_csv('dataset/trainingdata.txt', header=None)
+df = pd.DataFrame(data, columns=['time', 'battery'])
 
 # Visualization
 fig, ax = plt.subplots()
@@ -34,7 +32,6 @@ model = linear_model.LinearRegression()
 model.fit(X, y)
 
 # prediction
-
 timeCharged = float(input().strip())
 result = model.predict([[timeCharged]])
 

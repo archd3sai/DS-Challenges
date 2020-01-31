@@ -38,7 +38,40 @@ model.fit(X, y)
 timeCharged = float(input().strip())
 result = model.predict([[timeCharged]])
 
-if result[0] > 8:
-    print (8.0)
-else:
-    print (round(result[0],2))
+for i in result: 
+    if i[0] > 8:
+        print (8.0)
+    else:
+        print (np.round(i[0],2))
+
+        
+        
+## Hackerrank
+# Importing Libraries
+import numpy as np
+import pandas as pd
+from sklearn import linear_model
+
+df = pd.read_csv('trainingdata.txt', header=None)
+df.columns = ['time', 'battery']
+
+# Since there is a ceiling effect at 8 hour, I'll remove them and fit a model
+df = df[df.battery<8]
+
+X = df.time.values.reshape(df.time.shape[0],1)
+y = df.battery.values.reshape(df.battery.shape[0],1)
+
+model = linear_model.LinearRegression()
+model.fit(X, y)
+
+# prediction
+
+timeCharged = float(input().strip())
+result = model.predict([[timeCharged]])
+
+for i in result: 
+    if i[0] > 8:
+        print (8.0)
+    else:
+        print (np.round(i[0],2))
+

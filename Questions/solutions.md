@@ -32,3 +32,14 @@ n = len(nums)
 
 missing_no = n*(n+1)/2 - sum(nums)
 ```
+
+#### An elevator in a building starts with 5 passengers and stops at seven 7 floors. If each passenger is equally likely to get an any floor and all the passengers leave independently of each other, what is the probability that no two passengers will get off at the same floor?
+
+```
+The number of ways to assing 7 floors to 5 passengers is 7⋅7⋅7⋅7⋅7 beacuse for each passenger you can choose one of the 7 floors.
+
+The number of ways to assign 7 floors to 5 passengers without repetition of floors is 7⋅6⋅5⋅4⋅3 because for the first passenger
+you have 7 option, for the second you will have 6 and so on. Note that this number count all possible orders betwen passengers too.
+
+Then, you will guess it, the result is (7⋅6⋅5⋅4⋅3)/(7^5).
+```

@@ -1,11 +1,11 @@
-#### A function that can take a string and return a list of bigrams
+#### (1) A function that can take a string and return a list of bigrams
 
 ```
 sentence = "In non-functional linguistics, a sentence is a textual unit consisting of one or more words that are grammatically linked."
 [biagram for biagram in zip(sentence.split(" ")[:-1], sentence.split(" ")[1:])]
 ```
 
-#### Remove Stop words
+#### (2) Remove Stop words
 ```
 stopwords = [
     'I', 
@@ -23,7 +23,7 @@ paragraph = 'I want to figure out how I can be a better data scientist'
 " ".join([i for i in paragraph.split(" ") if i not in stopwords])
 ```
 
-#### Finding missing number with O(n) complexity
+#### (3) Finding missing number with O(n) complexity
 
 Subtract all numbers from sum. If list starts with 0 then sum = [n*(n+1)/2] else sum = [(n+1)*(n+2)/2]
 ```
@@ -33,7 +33,7 @@ n = len(nums)
 missing_no = n*(n+1)/2 - sum(nums)
 ```
 
-#### An elevator in a building starts with 5 passengers and stops at seven 7 floors. If each passenger is equally likely to get an any floor and all the passengers leave independently of each other, what is the probability that no two passengers will get off at the same floor?
+#### (4) An elevator in a building starts with 5 passengers and stops at seven 7 floors. If each passenger is equally likely to get an any floor and all the passengers leave independently of each other, what is the probability that no two passengers will get off at the same floor?
 
 ```
 The number of ways to assing 7 floors to 5 passengers is 7⋅7⋅7⋅7⋅7 beacuse for each passenger you can choose one of the 7 floors.

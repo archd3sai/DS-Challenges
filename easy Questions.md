@@ -96,3 +96,39 @@ def num2roman(num):
 
     return roman
 ```
+
+#### (8) If X ~ N (3, 2²) and Y ~ N(1, 2²) what is the distribution of 2X-Y ?
+```
+mean = (3*2 - 1) = 5
+
+Var(2X−Y) = 2^2*Var(X) + 1^2*Var(Y) − 2*2*1*Cov(X,Y)
+          = 4*Var(X) + Var(Y) − 0
+          = 4*4 + 4 
+          = 20
+
+Distribution of (2X-Y) ~ N(5,20)
+```
+
+#### (9) Alice and Bob take turns in rolling a fair dice. Whoever  gets "6" first wins the game. Alice starts the game. What are the chances that Alice wins.
+```
+First Round:
+P(Alice Win) = 1/6
+P(Bob Win) = 5/6 * 1/6 = 5/6 * P(Alice Win)
+
+P(Alice Win) + P(Bob Win) = 1
+x + 5/6 * x = 1
+x = 6/11
+```
+
+#### (10) The product costs 100 dollars per month, averages 10% in monthly churn, and the average customer sticks around for around 3.5 months. Calculate the formula for the average lifetime value.
+```
+LTV = Average Revenue Per Account / Churn Rate 
+    = 100/0.1
+    = 1000
+```
+
+#### (11) Explain results of a model when cofficients are not available
+
+```
+Partial Dependence plots and Explainable AI (LIME, SHAP)
+```

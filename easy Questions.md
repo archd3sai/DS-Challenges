@@ -154,3 +154,15 @@ b = list(a)
 c = [x for x in b if b.count(x)==1]
 print(c[0] if len(c) >= 1 else -1)
 ```
+
+#### (14) Find an index of first duplicate.
+```python
+def firstduplicate(a):
+    b = []
+    
+    for ind, i in enumerate(a):
+        if i in b:
+            return ind
+        else:
+            b.append(i)
+```

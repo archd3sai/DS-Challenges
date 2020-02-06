@@ -132,3 +132,25 @@ LTV = Average Revenue Per Account / Churn Rate
 ```
 Partial Dependence plots and Explainable AI (LIME, SHAP)
 ```
+
+#### (12) In any 15-minute interval, there is a 20% probability that you will see at least one shooting star. What is the probability that you see at least one shooting star in the period of an hour?
+
+```
+We can model this as a Poisson distribution with rate λ.
+
+Probability of seeing no shooting star = exp(-15*λ)*(λt^0)/0!
+                                  P(0) = exp(-15*λ) 
+                               1 - 0.2 = exp(-15*λ)    
+                                       => λ
+                                       
+Probability of seeing at lease one shooting star in 60 min, P = 1 - P(0)
+                                                              = 1 - exp(-60*λ)
+```
+
+#### (13) Print First Non-repeating Character. "aaabccdd" -> "b", "abcbad" -> "c", "abcabc" -> -1
+```python
+a = 'aaabbcdc'
+b = list(a)
+c = [x for x in b if b.count(x)==1]
+print(c[0] if len(c) >= 1 else -1)
+```

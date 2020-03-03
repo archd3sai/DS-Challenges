@@ -182,3 +182,21 @@ while i <= 100:
     print()
     i+=1
 ```
+
+#### (16) Split a String
+```python
+test_cases = int(input())                  
+
+for i in range(test_cases):
+    
+    line = input()
+    string, k = line.split(" ")
+
+    k = int(k)
+    l = len(string)
+    
+    if ((l/k >= k-1) and (l%k == 0 or l%k == k-1)):
+        print("-".join([string[i:i + k] for i in range(0, len(string), k)]))
+    else:
+        print(-1)
+ ```

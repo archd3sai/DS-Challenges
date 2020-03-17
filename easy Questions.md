@@ -200,3 +200,21 @@ for i in range(test_cases):
     else:
         print(-1)
  ```
+
+#### (17) multiply matrices
+
+```
+def multiply_row(A, B):
+    """
+    function to mutiply B components to subsequent rows of A 
+    parameters: A matrix of size n*m 
+                B matrix of size 1*n to multiply 
+    return:     A matrix with rows multiplied by B components
+    """
+    
+    if len(B) == len(A):
+        A = [[b*i for i in a] for a, b in zip(A, B)]
+        return A
+    else:
+        print("Size requirements do not match")
+```
